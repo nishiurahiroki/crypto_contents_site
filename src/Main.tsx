@@ -13,6 +13,9 @@ export function Main() {
         <Header />
 
         <Switch>
+          <Route path="/tokenBridgeAppLinks">
+            <TokenBridgeAppLinks />
+          </Route>
         </Switch>
       </HashRouter>
     </div>

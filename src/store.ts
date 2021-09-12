@@ -1,11 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
 import networkSelectorSlice from './slices/networkSelectorSlice'
-
+import tokenBridgeAppLinksSlice from './slices/tokenBridgeAppLinksSlice'
 
 export const store = configureStore({
   reducer : {
-    networkSelector : networkSelectorSlice
+    networkSelector : networkSelectorSlice,
+    tokenBridgeAppLinks : tokenBridgeAppLinksSlice,
   }
 })
 

@@ -4,20 +4,7 @@ import { Network } from '../types/Network'
 
 import { RootState } from '../store'
 
-const bsc : Network = {
-  name : 'bsc'
-}
-const polygon : Network = {
-  name : 'polygon'
-}
-const ethereum : Network = {
-  name : 'ethereum'
-}
-const initialNetworks = [
-  bsc,
-  polygon,
-  ethereum
-]
+import NetworkRepository, { bsc } from '../repositories/NetworkRepository'
 
 
 export interface NetworkSelectorState {
@@ -25,6 +12,8 @@ export interface NetworkSelectorState {
   networks : Network[]
 }
 
+// TODO sliceの中でfetchAllするのはあんまり良くない気がする
+const initialNetworks = NetworkRepository.fetchAll()
 const initialState : NetworkSelectorState = {
   value : bsc,
   networks : initialNetworks
