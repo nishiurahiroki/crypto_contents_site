@@ -6,7 +6,7 @@
   "scripts": {
     "dev:server": "webpack serve --config webpack.config.js --mode development --progress",
     "build": "webpack --mode production",
-    "deploy:prod" : "npm i && firebase deploy"
+    "deploy:prod" : "npm i && npm run build"
   },
   "author": "",
   "license": "ISC",
