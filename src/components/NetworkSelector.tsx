@@ -24,7 +24,7 @@ export function NetworkSelector() {
       >
         {
           networkList.map(network => (
-            <option value={network.name}>{network.name}</option>
+            <option key={network.name} value={network.name}>{network.name}</option>
           ))
         }
       </select>
