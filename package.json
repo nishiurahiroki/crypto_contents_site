@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devServer": "webpack serve --config webpack.config.js --mode development --progress",
-    "build": "webpack --mode production"
+    "dev:server": "webpack serve --config webpack.config.js --mode development --progress",
+    "build": "webpack --mode production",
+    "deploy:prod" : "firebase deploy"
   },
   "author": "",
   "license": "ISC",
