@@ -2,12 +2,16 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
+const commitHash = require('child_process')
+                    .execSync('git rev-parse --short HEAD')
+                    .toString()
+
 module.exports = {
   mode: "development",
   entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "app.js",
+    filename: `app.${commitHash}.js`,
   },
   resolve: {
     modules: [path.resolve(__dirname, "node_modules")],
