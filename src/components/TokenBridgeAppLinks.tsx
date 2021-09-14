@@ -7,16 +7,40 @@ export function TokenBridgeAppLinks() {
   const links = useSelector(linksSelector)
 
   return (
-    <div>
-      <h3>Bridge App Links</h3>
+    <div className="column">
+      <div className="columns">
+        <div className="column">
+          <strong>Bridge token service links</strong>
+        </div>
+      </div>
+
       {
         links.map(link => (
-          <div key={link.url} style={{ margin:'2 2 2 2' }}>
-            <div>
-              <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
-            </div>
-            <div>
-              swap fee <label style={{ fontFamily : 'sans-serif' }}>{link.swapFee}</label> %
+          <div key={link.url} className="columns">
+            <div className="column">
+              <div className="box">
+                <article className="media">
+                  <div className="media-left">
+                    <figure className="image is-64x64">
+                      <img src={`https://www.google.com/s2/favicons?domain=${link.url}`} alt="Image"/>
+                    </figure>
+                  </div>
+                  <div className="media-content">
+                    <div className="content">
+                      <p>
+                        <strong className="is-size-4">
+                          <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
+                        </strong>
+                        <br/>
+                        <small>swap fee　</small>
+                        <small>
+                          <strong>{link.swapFee} %</strong>
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         ))
