@@ -11,8 +11,13 @@ export function TokenBridgeAppLinks() {
       <h3>Bridge App Links</h3>
       {
         links.map(link => (
-          <div key={link.url}>
-            <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
+          <div key={link.url} style={{ margin:'2 2 2 2' }}>
+            <div>
+              <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
+            </div>
+            <div>
+              swap fee <label style={{ fontFamily : 'sans-serif' }}>{link.swapFee}</label> %
+            </div>
           </div>
         ))
       }

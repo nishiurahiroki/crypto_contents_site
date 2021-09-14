@@ -2,35 +2,12 @@ import { createSlice } from '@reduxjs/toolkit'
 
 import { TokenBridgeApp } from '../types/TokenBridgeApp'
 
+import TokenBridgeAppRepository from '../repositories/TokenBridgeAppRepository'
+
 import { RootState } from '../store'
 
-import {
-  bsc,
-  polygon,
-  ethereum
-} from '../repositories/NetworkRepository'
 
-
-const links : TokenBridgeApp[] = [
-  {
-    name : 'AnySwap',
-    supportNetworks : [
-      bsc,
-      polygon,
-      ethereum
-    ],
-    url : 'https://stable.anyswap.exchange/#/swap'
-  },
-  {
-    name : 'Evodefi',
-    supportNetworks : [
-      bsc,
-      polygon,
-      ethereum
-    ],
-    url : 'https://bridge.evodefi.com/?token=USDC'
-  }
-]
+const links : TokenBridgeApp[] = TokenBridgeAppRepository.fetchAll()
 
 interface TokenBridgeAppLinksState {
   links : TokenBridgeApp[]
