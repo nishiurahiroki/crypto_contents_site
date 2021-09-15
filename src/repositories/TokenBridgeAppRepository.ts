@@ -20,7 +20,6 @@ const links : TokenBridgeApp[] = [
   {
     name : 'Evodefi',
     supportNetworks : [
-      bsc,
       polygon,
       ethereum
     ],

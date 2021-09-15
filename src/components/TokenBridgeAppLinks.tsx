@@ -37,6 +37,21 @@ export function TokenBridgeAppLinks() {
                           <strong>{link.swapFee} %</strong>
                         </small>
                       </p>
+                      <nav className="level is-mobile">
+                        <div className="level-left">
+
+                          {
+                            link.supportNetworks.map(network => (
+                              <span key={network.name} className="level-item">
+                                <span className="icon is-medium">
+                                  <img src={`../../assets/images/network/${network.name}.png`} alt="Image"/>
+                                </span>
+                              </span>
+                            ))
+                          }
+
+                        </div>
+                      </nav>
                     </div>
                   </div>
                 </article>
