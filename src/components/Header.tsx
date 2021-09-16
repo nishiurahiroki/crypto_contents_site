@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useHistory } from 'react-router-dom'
 
@@ -6,6 +6,11 @@ import { NetworkSelector } from './NetworkSelector'
 
 export function Header() {
   const history = useHistory()
+  const [isActiveBurgerMenu, setIsActiveBurgerMenu] = useState<boolean>(false)
+
+  const onClickBurgerMenu = () => {
+    setIsActiveBurgerMenu(isActiveBurgerMenu => !isActiveBurgerMenu)
+  }
 
   const onClickTitle = () => {
     history.push('/')
@@ -29,14 +34,14 @@ export function Header() {
             </article>
           </a>
 
-          <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <a role="button" className={`navbar-burger ${isActiveBurgerMenu && 'is-active'}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={onClickBurgerMenu}>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
 
-        <div id="navbarBasicExample" className="navbar-menu">
+        <div id="navbarBasicExample" className={`navbar-menu ${isActiveBurgerMenu && 'is-active'}`}>
           <div className="navbar-start">
             <a className="navbar-item" onClick={onClickHome}>
               Home
