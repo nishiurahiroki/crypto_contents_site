@@ -1,0 +1,58 @@
+{
+  "links" : [
+    {
+      "name" : "AnySwap",
+      "supportNetworks" : [
+        "bsc",
+        "polygon",
+        "ethereum",
+        "fusion",
+        "Heco",
+        "avax",
+        "xDai",
+        "Arbitrum",
+        "kcc",
+        "okex",
+        "one",
+        "movr",
+        "eth-goerli",
+        "Fantom"
+      ],
+      "url" : "https://stable.anyswap.exchange/#/swap",
+      "swapFee" : "0.1"
+    },
+    {
+      "name" : "Evodefi",
+      "supportNetworks" : [
+        "polygon",
+        "Fantom",
+        "Heco",
+        "hsc",
+        "ethereum"
+      ],
+      "url" : "https://bridge.evodefi.com/?token=USDC",
+      "swapFee" : "0.5"
+    },
+    {
+      "name" : "xPollinate",
+      "supportNetworks" : [
+        "polygon",
+        "BSC",
+        "xDai",
+        "Fantom"
+      ],
+      "url" : "https://xpollinate.io/",
+      "swapFee" : "0.05"
+    },
+    {
+      "name" : "Supra",
+      "supportNetworks" : [
+        "polygon",
+        "BSC",
+        "Fantom"
+      ],
+      "url" : "https://app.supra.finance/bridge",
+      "swapFee" : ""
+    }
+  ]
+}

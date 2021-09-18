@@ -1,0 +1,49 @@
+{
+  "networks" : [
+    {
+      name : "bsc"
+    },
+    {
+      name : "polygon"
+    },
+    {
+      name : "ethereum"
+    },
+    {
+      name : "xDai"
+    },
+    {
+      name : "Fantom"
+    },
+    {
+      name : "fusion"
+    },
+    {
+      name : "Heco"
+    },
+    {
+      name : "avax"
+    },
+    {
+      name : "Arbitrum"
+    },
+    {
+      name : "kcc"
+    },
+    {
+      name : "okex"
+    },
+    {
+      name : "one"
+    },
+    {
+      name : "movr"
+    },
+    {
+      name : "eth-goerli"
+    },
+    {
+      name : "hsc"
+    }
+  ]
+}
